@@ -1,0 +1,33 @@
+{% extends 'work/base.html' %}
+{% block content5 %}
+
+ <a href="{% url 'Dise_' %}" class="top-menu"><span
+         class="glyphicon glyphicon-plus"></span></a>
+
+{% endblock %}
+
+{% block content3 %} <tr>
+        <h1 style="text-align: center">
+        DISEASE
+        </h1>
+
+            {% endblock %}
+
+{% block content2 %} <tr>
+         <td>Id</td>
+        <td>Description</td>
+        <td>Disease code</td>
+ <td>Pathogen</td>
+         </tr>
+
+            {% endblock %}
+{% block content %}
+    {% for post in posts %}
+        <tr>
+            <td>{{ post.id_id }}</td>
+            <td>{{ post.description }}</td>
+            <td>{{ post.disease_code }}</td>
+             <td>{{ post.pathogen }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

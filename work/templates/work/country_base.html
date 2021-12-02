@@ -1,0 +1,32 @@
+{% extends 'work/base.html' %}
+{% block content5 %}
+
+ <a href="{% url 'C_' %}" class="top-menu"><span
+         class="glyphicon glyphicon-plus"></span></a>
+
+{% endblock %}
+
+{% block content3 %} <tr>
+        <h1 style="text-align: center">
+        COUNTRY
+        </h1>
+
+            {% endblock %}
+
+{% block content2 %} <tr>
+         <td>Country</td>
+        <td>Population</td>
+         </tr>
+
+            {% endblock %}
+
+
+{% block content %}
+    {% for post in posts %}
+        <tr>
+            <td>{{ post.cname }}</td>
+            <td>{{ post.population }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+

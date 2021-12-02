@@ -1,0 +1,31 @@
+{% extends 'work/base.html' %}
+{% block content5 %}
+
+ <a href="{% url 'Disc_' %}" class="top-menu"><span
+         class="glyphicon glyphicon-plus"></span></a>
+
+{% endblock %}
+{% block content3 %} <tr>
+        <h1 style="text-align: center">
+        DISCOVER
+        </h1>
+
+            {% endblock %}
+
+{% block content2 %} <tr>
+         <td>Disease code</td>
+        <td>Country</td>
+ <td>First Enc Date</td>
+         </tr>
+
+            {% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <tr>
+            <td>{{ post.disease_code_id }}</td>
+        <td>{{ post.cname_id}}</td>
+        <td>{{ post.first_enc_date }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

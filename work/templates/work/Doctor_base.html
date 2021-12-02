@@ -1,0 +1,30 @@
+{% extends 'work/base.html' %}
+{% block content5 %}
+
+ <a href="{% url 'Doc_' %}" class="top-menu"><span
+         class="glyphicon glyphicon-plus"></span></a>
+
+{% endblock %}
+{% block content3 %} <tr>
+        <h1 style="text-align: center">
+        DOCTOR
+        </h1>
+
+            {% endblock %}
+
+{% block content2 %} <tr>
+         <td>EMAIL</td>
+        <td>DEGREE</td>
+
+         </tr>
+
+            {% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <tr>
+            <td>{{ post.email_id }}</td>
+        <td>{{ post.degree}}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
